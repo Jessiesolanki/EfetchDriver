@@ -1,0 +1,31 @@
+@BASE_URL = https://efetch.om/api/
+@access_token = access_token_65a2391b61245a763fe8e630cdc0242dae1eec76
+@language = en_GB
+
+### login
+GET {{BASE_URL}}driver/login?login=ahmed@efetch.org&password=admin&
+
+### get dashboard
+GET {{BASE_URL}}driver/get-dashboard
+    ?access_token=access_token_a4dcb91bfdb3a618c30059e58afa0c41b1b84325
+    &uid=85
+
+### get order details
+GET {{BASE_URL}}driver/get-order-details
+    ?access_token=access_token_a4dcb91bfdb3a618c30059e58afa0c41b1b84325
+    &uid=85
+    &order_id=319
+    &order_type=picking
+
+### change order status
+GET {{BASE_URL}}driver/reached-to-customer
+    ?access_token=access_token_96d2cdc7c12ab75ff9acf4ccc0489a7d603a757a
+    &uid=65
+    &order_id=201
+    &order_type=delivery
+
+### get notification
+GET {{BASE_URL}}user/get-notification
+    ?access_token={{access_token}}
+    &uid=65
+    &language={{language}}
